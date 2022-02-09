@@ -1,0 +1,81 @@
+en Download esta la carpeta ngrok
+Por CLI tipear:
+ngrok http --region=sa 8080
+
+
+webhooks para que el bot funcione
+
+url:
+https://webexapis.com/v1/webhooks
+
+headers:
+content-type: application/json
+Authorization: Bearer alsjfsijfoiewjoifje
+
+body
+{
+    "name": "Hola desde webhooks",
+    "targetUrl": "http://9172-190-244-142-89.sa.ngrok.io/v1/tlogic/arcor",
+    "resource": "messages",
+    "event": "created"
+}
+
+webhooks para Submit Cards
+
+body
+{
+  "name": "My Attachment Action Webhook",
+  "targetUrl": "http://9172-190-244-142-89.sa.ngrok.io/v1/tlogic/arcor",
+  "resource": "attachmentActions",
+  "event": "created"
+}
+
+
+elif "reportar un incidente" in message.text.lower():
+					print("\ndentro de reportar un incidente")
+					
+					queryCategories = db.session.query(CategorySubCategory.category_id.distinct()).order_by(CategorySubCategory.category_id).all()
+					choicesCategories = [{"value": str(row.id), "title": str(row.name)} for row in db.session.query(Category).filter(Category.id.in_(queryCategories)) ]
+					print(choicesCategories)
+					attachment = {
+						"contentType": "application/vnd.microsoft.card.adaptive",
+						"content": {
+							"type": "AdaptiveCard",
+							"body": [
+								{
+									"type": "TextBlock",
+									"text": "Reportar un incidente"
+								},
+								{
+								"type": "Input.Text",
+								"id": "Title",
+								"placeholder": "enter title",
+								"maxLength": 500
+								},
+								{
+								"type": "Input.Text",
+								"id": "Description",
+								"placeholder": "enter comment",
+								"maxLength": 500,
+								"isMultiline": True
+								},
+								{
+									"type": "Input.ChoiceSet",
+									"id": "Select",
+									"placeholder": "select category",
+									"choices": choicesCategories,
+									"style": "compact"
+								}
+							],
+							"actions": [{
+								"type": "Action.Submit",
+								"title": "Submit"
+							}],
+							"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+							"version": "1.2"
+						}
+					}
+
+					api.messages.create(roomId=room_id, text="Fallback", attachments=[attachment])
+
+					return "OK"
