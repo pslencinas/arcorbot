@@ -13,11 +13,8 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-#access_token = 'ZGZlY2JlZDEtZmQyZi00YzdmLWI5N2EtNDBlYTg5YTEzZWVmM2NlYjAyODktNWU2_PF84_0d577422-f7ee-453e-b09d-5bbe97cd69c7'
-
 #Jun2 2025
-access_token = 'NmYyNDI5Y2MtMWMxMS00YjVhLTg3MjAtZDkxMDNjZGYyNmNiMzUzZmY1N2MtMGU2_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f'
-#bot_id = 'Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL2MyNTJiY2M2LWIyOTEtNDFiMy1iMWJhLTMzY2YzNjc2NDUyZA'
+access_token = '-9643-417f-9974-ad72cae0e10f'
 
 WEBEX_BOT_USERNAME = 'reservation.arcor@webex.bot'
 
@@ -28,40 +25,6 @@ def db():
         yield db
     finally:
         db.close()
-
-
-# @app.post('/device/info')
-# def save_device_info(info: DeviceInfo, db=Depends(db)):
-#     object_in_db = crud.get_device_info(db, info.token)
-#     if object_in_db:
-#         raise HTTPException(400, detail= crud.error_message('This device info already exists'))
-#     return crud.save_device_info(db,info)
-
-# @app.get('/device/info/{token}')
-# def get_device_info(token: str, db=Depends(db)):
-#     info = crud.get_device_info(db,token)
-#     if info:
-#         return info
-#     else:
-#         raise HTTPException(404, crud.error_message('No device found for token {}'.format(token)))
-
-# @app.get('/device/info')
-# def get_all_device_info(db=Depends(db)):
-#     return crud.get_device_info(db)
-
-# @app.post('/configuration')
-# def save_configuration(config: Configuration, db=Depends(db)):
-#     # always maintain one config
-#     crud.delete_nudges_configuration(db)
-#     return crud.save_nudges_configuration(db, config)
-
-# @app.get('/configuration')
-# def get_configuration(db=Depends(db)):
-#     config = crud.get_nudges_configuration(db)
-#     if config:
-#         return config
-#     else:
-#         raise HTTPException(404, crud.error_message('No configuration set'))
 
 
 @app.post('/v1/arcor')
