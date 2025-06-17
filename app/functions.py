@@ -14,21 +14,8 @@ def formBienvenidaBot(token, name, personalEmail):
                         "type": "Column",
                         "items": [
                             {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
                                 "type": "TextBlock",
-                                "text": "Tlogic Arcor BOT - Reservas",
+                                "text": "Arcor BOT - Reservas",
                                 "weight": "Bolder",
                                 "color": "Light",
                                 "size": "Large"
@@ -149,19 +136,6 @@ def formReservas(token, sites, horario, personalEmail, date_now, five_dates):
                         "type": "Column",
                         "items": [
                             {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
                                 "type": "TextBlock",
                                 "weight": "Bolder",
                                 "text": "Seleccionar opciones",
@@ -239,19 +213,6 @@ def formBuscarLoation(token, site_name, time, duration, date, locations, persona
             {
                 "type": "ColumnSet",
                 "columns": [
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
                     {
                         "type": "Column",
                         "items": [
@@ -351,19 +312,6 @@ def formBuscarWorkspace(token, site_name, horario, date, workspaces, personalEma
                         "type": "Column",
                         "items": [
                             {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
                                 "type": "TextBlock",
                                 "weight": "Bolder",
                                 "text": "Continuar con la reserva:",
@@ -458,19 +406,6 @@ def formConfirmWorkspace(token, item):
                         "type": "Column",
                         "items": [
                             {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
                                 "type": "TextBlock",
                                 "weight": "Bolder",
                                 "text": "Reserva Confirmada",
@@ -533,19 +468,6 @@ def formConsultarWorkspace(token, items):
         {
             "type": "ColumnSet",
             "columns": [
-                {
-                    "type": "Column",
-                    "items": [
-                        {
-                            "type": "Image",
-                            "style": "Default",
-                            "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                            "size": "Medium",
-                            "height": "35px"
-                        }
-                    ],
-                    "width": "auto"
-                },
                 {
                     "type": "Column",
                     "items": [
@@ -689,19 +611,6 @@ def formCocheras(token, sites, horario, personalEmail, date_now, five_dates):
                         "type": "Column",
                         "items": [
                             {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
                                 "type": "TextBlock",
                                 "weight": "Bolder",
                                 "text": "Seleccionar opciones",
@@ -778,19 +687,6 @@ def formBuscarCocheras(token, site_name, horario, date, cocheras, personalEmail,
             {
                 "type": "ColumnSet",
                 "columns": [
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
                     {
                         "type": "Column",
                         "items": [
@@ -898,19 +794,6 @@ def formConfirmCochera(token, item):
                         "type": "Column",
                         "items": [
                             {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
                                 "type": "TextBlock",
                                 "weight": "Bolder",
                                 "text": "Reserva Confirmada",
@@ -976,19 +859,6 @@ def formCancelarReserva(token, values, personalEmail):
             {
                 "type": "ColumnSet",
                 "columns": [
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
                     {
                         "type": "Column",
                         "items": [
@@ -1059,19 +929,6 @@ def formConfirmarCancelacion(token, personalEmail):
             {
                 "type": "ColumnSet",
                 "columns": [
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
-                                "type": "Image",
-                                "style": "Default",
-                                "url": "https://testing.tsm.tlogic.com.ar/static/images/public/t-logo.png",
-                                "size": "Medium",
-                                "height": "35px"
-                            }
-                        ],
-                        "width": "auto"
-                    },
                     {
                         "type": "Column",
                         "items": [

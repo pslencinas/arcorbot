@@ -13,8 +13,13 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-access_token = 'ZGZlY2JlZDEtZmQyZi00YzdmLWI5N2EtNDBlYTg5YTEzZWVmM2NlYjAyODktNWU2_PF84_0d577422-f7ee-453e-b09d-5bbe97cd69c7'
-WEBEX_BOT_USERNAME = 'arcor-reservas@webex.bot'
+#access_token = 'ZGZlY2JlZDEtZmQyZi00YzdmLWI5N2EtNDBlYTg5YTEzZWVmM2NlYjAyODktNWU2_PF84_0d577422-f7ee-453e-b09d-5bbe97cd69c7'
+
+#Jun2 2025
+access_token = 'NmYyNDI5Y2MtMWMxMS00YjVhLTg3MjAtZDkxMDNjZGYyNmNiMzUzZmY1N2MtMGU2_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f'
+#bot_id = 'Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL2MyNTJiY2M2LWIyOTEtNDFiMy1iMWJhLTMzY2YzNjc2NDUyZA'
+
+WEBEX_BOT_USERNAME = 'reservation.arcor@webex.bot'
 
 TIME = []
 def db():
@@ -59,17 +64,17 @@ def db():
 #         raise HTTPException(404, crud.error_message('No configuration set'))
 
 
-@app.post('/v1/tlogic/arcor')
+@app.post('/v1/arcor')
 async def webhook_listener(request: Request, db=Depends(db)):
     api = WebexTeamsAPI(access_token = access_token)
 
-    print("\ndentro del POST webexBot /v1/tlogic/arcor")
+    print("\ndentro del POST webexBot /v1/arcor")
     headers = request.headers
     body = await request.json()
     #print(type(body))
     #body = json.dumps(body)
-    #print('\nwebexBot :: HEADER >> ',headers)
-    #print('\nwebexBot :: BODY >> ',body)
+    print('\nwebexBot :: HEADER >> ',headers)
+    print('\nwebexBot :: BODY >> ',body)
     data_id = body["data"]["id"]
     room_id = body["data"]["roomId"]
 
@@ -386,7 +391,7 @@ async def webhook_listener(request: Request, db=Depends(db)):
             return response, 200
         
    
-    if body["resource"] == 'messages' and body["name"] == 'Tlogic Arcor webhooks':
+    if body["resource"] == 'messages' and body["name"] == 'Arcor Webhook':
 
         personalEmail = body["data"]["personEmail"]
         print('\n:::::::::::::: Dentro del Menu Bienvenida: {}\n'.format(personalEmail))

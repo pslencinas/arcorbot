@@ -15,7 +15,7 @@ Authorization: Bearer alsjfsijfoiewjoifje
 body
 {
     "name": "Hola desde webhooks",
-    "targetUrl": "http://9172-190-244-142-89.sa.ngrok.io/v1/tlogic/arcor",
+    "targetUrl": "http://9172-190-244-142-89.sa.ngrok.io/v1/arcor",
     "resource": "messages",
     "event": "created"
 }
@@ -25,7 +25,7 @@ webhooks para Submit Cards
 body
 {
   "name": "My Attachment Action Webhook",
-  "targetUrl": "http://9172-190-244-142-89.sa.ngrok.io/v1/tlogic/arcor",
+  "targetUrl": "http://9172-190-244-142-89.sa.ngrok.io/v1/arcor",
   "resource": "attachmentActions",
   "event": "created"
 }
